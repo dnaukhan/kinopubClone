@@ -1,29 +1,61 @@
 .sidebar {
-    width: 200px;
-    height: 100vh;
-    background-color: #1c202b;
+  width: 200px;
+  float: left;
 
+  background-color: #1c202b;
 }
 .sidebar ul {
-    padding-left: 0;
-    border: none
+  padding-left: 0;
+  border: none;
+}
+.sidebar ul .link {
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  text-align: left;
+  border: none;
+  margin-top: 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
 
+.icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  margin-bottom: 2px;
 }
-.sidebar ul li {
-color: white;
-text-align: left;
-border: none;
-}
+
 .logo {
-    width: auto;
-    height: 30px;
-    margin-top: 20px;
-
+  width: auto;
+  height: 30px;
+  margin-top: 20px;
 }
 .sidebar ul h5 {
-    text-align: left;
-    color: white;
-    font-size: 10px;
-    margin: 0;
-    padding: 0;
+  text-align: left;
+  /*border-left: 10px;
+    border-right: 20px;*/
+  color: rgb(82, 78, 78);
+  font-size: 10px;
+  margin: 0;
+  padding-left: 5px;
+}
+
+.sidebar ul h5 {
+  text-align: left;
+  color: rgb(82, 78, 78);
+  font-size: 10px;
+  margin-bottom: 2%;
+  margin-top: 5%;
+  padding-left: 5px;
+}
+.sidebar ul h5 {
+  text-align: left;
+  color: rgb(82, 78, 78);
+  font-size: 10px;
+  padding-left: 0;
+  margin-bottom: 2%;
+  margin-top: 5%;
 }
