@@ -1,0 +1,29 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #1c202b;
+
+}
+.sidebar ul {
+    padding-left: 0;
+    border: none
+
+}
+.sidebar ul li {
+color: white;
+text-align: left;
+border: none;
+}
+.logo {
+    width: auto;
+    height: 30px;
+    margin-top: 20px;
+
+}
+.sidebar ul h5 {
+    text-align: left;
+    color: white;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}

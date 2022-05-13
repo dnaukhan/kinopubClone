@@ -1,0 +1,8 @@
+.button {
+    padding: 12px 20px;
+    border: none;
+    background-color: blueviolet;
+    border-radius: 4px;
+    color: #fff;
+    max-width: 200px; 
+}
