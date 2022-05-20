@@ -1,0 +1,33 @@
+.Profile-main {
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+} 
+
+.profile-content {
+    display: flex;
+    flex-direction: row;
+    /* justify-content:space-between; */
+    /* background-color:grey; */
+    /* color:aquamarine; */
+    /* border-bottom-color: #02b875; */
+    /* border-bottom-width: 10px; */
+    border-bottom: 1px solid #02b875;
+    background-color: #1c202b;
+}
+
+
+.Profile-last {
+    display: flex;
+    flex-direction: row;
+    background-color: #1c202b;
+    height: 100vh;
+}
+
+.tab-style {
+    /* background-color: red */
+    color: white;
+    margin-right: 15px;
+    padding: 8px;
+}
+

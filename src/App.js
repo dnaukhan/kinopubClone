@@ -4,6 +4,7 @@ import { Routes, Route, Link, useParams } from "react-router-dom";
 import Sidebar from './components/Sidebar/sidebar';
 import { Header } from './components/Header/Header';
 import FilmDetail from './containers/FilmDetail/FilmDetail';
+import ProfileScreen from './../src/containers/Profile/Profile';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 				<Routes>
 					<Route path='' element={<HomeScreen />} />
 					<Route path="filmDetails/:filmId" element={<FilmDetail />} />
+					<Route path="profile" element={<ProfileScreen />} />
 				</Routes>
 			</div>
 		</div>

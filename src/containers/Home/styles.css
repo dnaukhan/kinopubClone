@@ -4,5 +4,6 @@
     justify-content:baseline;
     align-items:flex-start;
     text-align: justify;
+    overflow-x: hidden;
 } 
 
