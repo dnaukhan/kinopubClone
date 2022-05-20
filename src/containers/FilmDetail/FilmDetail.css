@@ -1,0 +1,21 @@
+.main-section {
+	display: flex;
+	background-color: #1c202b;
+	height: 100%;
+}
+
+.poster-section {
+	display: flex;
+	flex-direction: row;
+}
+
+.poster-image {
+	width: 300px;
+	height: 450px;
+	padding: 15px 15px;
+}
+
+.detail-section {
+	display: flex;
+	flex-direction: row;
+}

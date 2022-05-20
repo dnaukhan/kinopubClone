@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { filmAttributes } from '../../constants/constants';
+import '../FilmDetail/FilmDetail.css'
 
 const FilmDetail = () => {
 
@@ -20,9 +21,19 @@ const FilmDetail = () => {
 		console.log("Film Detail", filmById)
 	}, [])
 
+	if (!film) {
+		return <h1>Film not found</h1>
+	}
 
-	return <h1>Film ID: {params.filmId} {film.Title} {film.}</h1>
+	return <div className="main-section">
+		<div className="poster-section">
+			<img src={film.Images[0]} className="poster-image" />
+		</div>
+		<div className="details-section">
+
+		</div>
+	</div>
 
 }
-
+{/* <h1>Film ID: {params.filmId} {film.Title}</h1> */ }
 export default FilmDetail;
