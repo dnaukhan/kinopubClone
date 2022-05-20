@@ -34,6 +34,8 @@ const FilmDetail = () => {
 		</div>
 	</div>
 
+	console.log("test")
+
 }
 {/* <h1>Film ID: {params.filmId} {film.Title}</h1> */ }
 export default FilmDetail;
