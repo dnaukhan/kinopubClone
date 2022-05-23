@@ -1,12 +1,14 @@
 .main-section {
 	display: flex;
-	background-color: #1c202b;
-	height: 100%;
+	flex-direction: row;
+	/* background-color: #1c202b; */
+	height: 100vh;
 }
 
 .poster-section {
 	display: flex;
-	flex-direction: row;
+	background-color: #1c202b;
+	align-items: top;
 }
 
 .poster-image {
@@ -15,7 +17,61 @@
 	padding: 15px 15px;
 }
 
-.detail-section {
+.details-section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.details-menu {
 	display: flex;
 	flex-direction: row;
+	border-bottom: 1px solid #02b875;
+	background-color: #1c202b;
+}
+
+.choice-style {
+	/* background-color: red */
+	color: white;
+	margin-right: 15px;
+	padding: 8px;
+}
+
+.details-more {
+	display: flex;
+	flex-direction: column;
+	background-color: #1c202b;
+	height: 100vh;
+}
+
+.details-more table {
+	/* width: 100%; */
+	table-layout: fixed;
+}
+
+.details-more table td {
+	font-size: 14px;
+	color: green;
+	text-align: left;
+	padding: 5px;
+
+}
+
+.details-more table span {
+	color: white
+}
+
+.details-more p {
+	font-size: 14px;
+	color: white;
+	text-align: left;
+	padding: 10px;
+}
+
+.details-more div {
+	font-size: 18px;
+	color: white;
+	text-align: left;
+	padding: 10px;
 }
