@@ -21,7 +21,8 @@
     display: flex;
     flex-direction: row;
     background-color: #1c202b;
-    height: 100vh;
+    /* height: 100vh; */
+    flex-wrap: wrap;
 }
 
 .tab-style {
@@ -31,3 +32,10 @@
     padding: 8px;
 }
 
+
+.film-item {
+    display : flex;
+    width: 50%;
+    margin: 5px 0;
+    color: white;
+}
