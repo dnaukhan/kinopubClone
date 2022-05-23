@@ -67,7 +67,10 @@ const FilmDetail = () => {
 
 			</div>
 			<div className="details-more">
-				<div>
+				{currentTab === 0 && <div>suzhet</div>}
+				{currentTab === 1 && <div>trailer</div>}
+				{currentTab === 2 && <div>audio</div>}
+				{/* <div>
 					<p>{film.Plot}</p>
 					<div><span>Информация</span></div>
 					<table>
@@ -100,7 +103,7 @@ const FilmDetail = () => {
 							<td> {film.Awards} </td>
 						</tr>
 					</table>
-				</div>
+				</div> */}
 				{/* <p>{film.Plot}</p>
 				<div><span>Информация</span></div>
 				<div><span>Рейтинг: </span>{film.imdbRating}</div>
