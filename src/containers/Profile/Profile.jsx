@@ -27,6 +27,8 @@ const profileTabs = [
 ]
 
 
+
+
 const ProfileScreen = () => {
 
     const [user, setUser] = useState();
@@ -55,24 +57,34 @@ const ProfileScreen = () => {
        fetchData();
        }, []); 
 
-    return <div>
-        <div className='Profile-main'>
-            <UserInfo user={user}/> 
-        </div>
-        <div className='profile-content'>
-           {
-               profileTabs.map((tab) => {
-                   return <div style={currentTabStyle(tab.id)} className="tab-style" onClick={() => onTabClick(tab.id)}><span>{tab.text}</span></div>;
-               })
-           } 
-        </div>
-        <div className='Profile-last'>
+    return (
+        <div>
+            <div className='Profile-main'>
+                <UserInfo user={user}/> 
+            </div>
+            <div className='profile-content'>
             {
-                
+                profileTabs.map((tab) => {
+                    return <div style={currentTabStyle(tab.id)} className="tab-style" onClick={() => onTabClick(tab.id)}><span>{tab.text}</span></div>;
+                })
+            } 
+            </div>
+            <div className='Profile-last'>
+            {
+                filmAttributes.map((film) => {
+                    const {Title, Country, Images} = film 
+                    return (
+                        <div className='film-item'>
+                            <div> <img src={Images[0]}/></div>
+                            <div>title: {Title} {Country}
+                            </div>
+                        </div>
+                    )
+                })
             }
-
+            </div>
         </div>
-        </div>;
+    )
 }
 
 export default ProfileScreen;
