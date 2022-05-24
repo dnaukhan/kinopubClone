@@ -78,7 +78,7 @@ const ProfileScreen = () => {
                                 <div className='film-item'>
                                     <div> <img src={Images[0]}/></div>
                                     <div className='opisanie'>
-                                        <div style={{fontWeight: 'bold'}}>{Title}</div>
+                                        <div style={{fontWeight: 'bold', fontSize: 20}}>{Title}</div>
                                         <div style={{color: 'gray'}}>{Year}, {Director}</div>
                                         <div style={{color: '#7cffcb'}}>{Genre}</div>
                                         <div><img src={require("../../assets/images/imdb.png")} style={{height: 15, width: 15 }} />{imdbRating}</div>
@@ -99,7 +99,7 @@ const ProfileScreen = () => {
                                 <div className='film-item'>
                                     <div> <img src={Images[1]}/></div>
                                     <div className='opisanie'>
-                                        <div style={{fontWeight: 'bold'}}>{Title}</div>
+                                        <div style={{fontWeight: 'bold', fontSize: 20}}>{Title}</div>
                                         <div style={{color: 'gray'}}>{Year}, {Director}</div>
                                         <div style={{color: '#7cffcb'}}>{Genre}</div>
                                         <div><img src={require("../../assets/images/imdb.png")} style={{height: 15, width: 15 }} />{imdbRating}</div>
@@ -116,7 +116,7 @@ const ProfileScreen = () => {
                                 <div className='film-item'>
                                     <div> <img src={Images[2]}/></div>
                                     <div className='opisanie'>
-                                        <div style={{fontWeight: 'bold'}}>{Title}</div>
+                                        <div style={{fontWeight: 'bold', fontSize: 20}}>{Title}</div>
                                         <div style={{color: 'gray'}}>{Year}, {Director}</div>
                                         <div style={{color: '#7cffcb'}}>{Genre}</div>
                                         <div><img src={require("../../assets/images/imdb.png")} style={{height: 15, width: 15 }} />{imdbRating}</div>
@@ -133,7 +133,7 @@ const ProfileScreen = () => {
                                 <div className='film-item'>
                                     <div> <img src={Images[3]}/></div>
                                     <div className='opisanie'>
-                                        <div style={{fontWeight: 'bold'}}>{Title}</div>
+                                        <div style={{fontWeight: 'bold', fontSize: 20}}>{Title}</div>
                                         <div style={{color: 'gray'}}>{Year}, {Director}</div>
                                         <div style={{color: '#7cffcb'}}>{Genre}</div>
                                         <div><img src={require("../../assets/images/imdb.png")} style={{height: 15, width: 15}} />{imdbRating}</div>
@@ -150,7 +150,7 @@ const ProfileScreen = () => {
                                 <div className='film-item'>
                                     <div> <img src={Images[4]}/></div>
                                     <div className='opisanie'>
-                                        <div style={{fontWeight: 'bold'}}>{Title}</div>
+                                        <div style={{fontWeight: 'bold', fontSize: 20}}>{Title}</div>
                                         <div style={{color: 'gray'}}>{Year}, {Director}</div>
                                         <div style={{color: '#7cffcb'}}>{Genre}</div>
                                         <div><img src={require("../../assets/images/imdb.png")} style={{height: 15, width: 15 }} />{imdbRating}</div>
