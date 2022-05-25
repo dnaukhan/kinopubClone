@@ -37,7 +37,7 @@ const ProfileScreen = () => {
     const currentTabStyle = (id) => {
         return {backgroundColor: id === currentTab ? '#02b875' : 'transparent', borderTopLeftRadius: 10, borderTopRightRadius: 10}
     }
-    
+
     const onTabClick = (id) => {
         setCurrentTab(id)
     }
