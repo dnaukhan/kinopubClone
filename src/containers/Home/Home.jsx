@@ -5,17 +5,17 @@ import List from '../../components/List/List';
 import Text from '../../components/Text';
 import { filmAttributes } from '../../constants/constants';
 import './styles.css';
-import MaterialButton from '@material-ui/core/Button';
+// import MaterialButton from '@material-ui/core/Button';
 import Switch from '@material-ui/core/Switch';
-import TextField from '@material-ui/core/TextField';
-import { useStyles } from './styles';
+// import TextField from '@material-ui/core/TextField';
+// import { useStyles } from './styles';
 
 const HomeScreen = () => {
 
 	const [users, setUsers] = useState([]);
 	const [newFilms, setNewFilms] = useState([]);
 
-	const classes = useStyles()
+	// const classes = useStyles()
 
 	// const fetchData = async () => {
 	// 	fetch('https://randomuser.me/api?results=20')
