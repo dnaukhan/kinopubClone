@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import FilmInfo from "../../components/FilmInfo/filmInfo";
 import { filmAttributes } from '../../constants/constants';
 import '../FilmDetail/FilmDetail.css'
 
@@ -67,53 +68,10 @@ const FilmDetail = () => {
 
 			</div>
 			<div className="details-more">
-				{currentTab === 0 && <div>suzhet</div>}
+				{currentTab === 0 && <div><FilmInfo film={film} /></div>}
 				{currentTab === 1 && <div>trailer</div>}
 				{currentTab === 2 && <div>audio</div>}
-				{/* <div>
-					<p>{film.Plot}</p>
-					<div><span>Информация</span></div>
-					<table>
-						<tr>
-							<td><span>Рейтинг: </span></td>
-							<td> {film.Year} </td>
-						</tr>
-						<tr>
-							<td><span>Год выхода: </span></td>
-							<td> {film.Country} </td>
-						</tr>
-						<tr>
-							<td><span>Жанр: </span></td>
-							<td> {film.Genre} </td>
-						</tr>
-						<tr>
-							<td><span>Режисер: </span></td>
-							<td> {film.Director} </td>
-						</tr>
-						<tr>
-							<td><span>В ролях: </span></td>
-							<td> {film.Actors} </td>
-						</tr>
-						<tr>
-							<td><span>Длительность: </span></td>
-							<td> {film.Runtime} </td>
-						</tr>
-						<tr>
-							<td><span>Награды: </span></td>
-							<td> {film.Awards} </td>
-						</tr>
-					</table>
-				</div> */}
-				{/* <p>{film.Plot}</p>
-				<div><span>Информация</span></div>
-				<div><span>Рейтинг: </span>{film.imdbRating}</div>
-				<div><span>Год выхода: </span>{film.Year} </div>
-				<div><span>Страна: </span>{film.Country}</div>
-				<div><span>Жанр: </span>{film.Genre} </div>
-				<div><span>Режисер: </span>{film.Director} </div>
-				<div><span>В ролях: </span>{film.Actors} </div>
-				<div><span>Длительность: </span>{film.Runtime} </div>
-				<div><span>Награды: </span>{film.Awards}</div> */}
+
 			</div>
 		</div>
 	</div>

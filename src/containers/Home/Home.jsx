@@ -4,7 +4,7 @@ import List from '../../components/List/List';
 import Text from '../../components/Text';
 import { filmAttributes } from '../../constants/constants';
 import './styles.css';
-
+igt
 const HomeScreen = () => {
 
 	const [users, setUsers] = useState([]);
