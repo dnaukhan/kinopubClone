@@ -5,7 +5,7 @@ import List from '../../components/List/List';
 import Text from '../../components/Text';
 import { filmAttributes } from '../../constants/constants';
 import './styles.css';
-// import MaterialButton from '@material-ui/core/Button';
+import MaterialButton from '@material-ui/core/Button';
 import Switch from '@material-ui/core/Switch';
 // import TextField from '@material-ui/core/TextField';
 // import { useStyles } from './styles';
@@ -50,7 +50,7 @@ const HomeScreen = () => {
 		<List newFilms={newFilms} title='Популярные фильмы' />
 		<List newFilms={drama} title='Драма' />
 		<List newFilms={fantasy} title='Фантастика' />
-		{/* <MaterialButton variant="outlined">Hello World</MaterialButton> */}
+		<MaterialButton variant="outlined">Hello World</MaterialButton>
 		<Switch defaultChecked />
 		{/* <TextField className={classes.textField} id="outlined-basic" label="Outlined" variant="outlined" />
 		<div className={classes.bottomDiv}>
