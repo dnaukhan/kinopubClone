@@ -4,26 +4,26 @@ import { filmAttributes } from '../../constants/constants';
 import './Profile.css'
 
 const profileTabs = [
-    {
-        id: 0,
-        text: 'Понравились'
-    },
-    {
-        id: 1,
-        text: 'Не Понравились'
-    },
-    {
-        id: 2,
-        text: 'Сериалы'
-    },
-    {
-        id: 3,
-        text: 'Комментарии'
-    },
-    {
-        id: 4,
-        text: 'Сейчас смотрю'
-    },
+	{
+		id: 0,
+		text: 'Понравились'
+	},
+	{
+		id: 1,
+		text: 'Не Понравились'
+	},
+	{
+		id: 2,
+		text: 'Сериалы'
+	},
+	{
+		id: 3,
+		text: 'Комментарии'
+	},
+	{
+		id: 4,
+		text: 'Сейчас смотрю'
+	},
 ]
 
 
@@ -31,8 +31,8 @@ const profileTabs = [
 
 const ProfileScreen = () => {
 
-    const [user, setUser] = useState();
-    const [currentTab, setCurrentTab] = useState(0);
+	const [user, setUser] = useState();
+	const [currentTab, setCurrentTab] = useState(0);
 
     const currentTabStyle = (id) => {
         return {backgroundColor: id === currentTab ? '#02b875' : 'transparent', borderTopLeftRadius: 10, borderTopRightRadius: 10}
@@ -42,22 +42,20 @@ const ProfileScreen = () => {
         setCurrentTab(id)
     }
 
-    const fetchData = () => {
-        fetch('https://randomuser.me/api?results=1')
-            .then((res) => res.json())
-            .then(data => {
-                
-                setUser(data.results[0])
-                console.log('data', data.results[0])
-            })
-   
-    }
+	const fetchData = () => {
+		fetch('https://randomuser.me/api?results=1')
+			.then((res) => res.json())
+			.then(data => {
+				setUser(data.results[0])
+				console.log('data', data.results[0])
+			})
+	}
 
-    useEffect(() => {
-       fetchData();
-       }, []); 
+	useEffect(() => {
+		fetchData();
+	}, []);
 
-    return (
+	return (
         <div>
             <div className='profile-main'>
                 <UserInfo user={user}/> 
@@ -163,6 +161,6 @@ const ProfileScreen = () => {
             </div>
         </div>
     )
-}   
+}
 
 export default ProfileScreen;
