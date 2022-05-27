@@ -1,8 +1,36 @@
+import { Box, Tab, Tabs, Typography } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import FilmInfo from "../../components/FilmInfo/filmInfo";
 import { filmAttributes } from '../../constants/constants';
 import '../FilmDetail/FilmDetail.css'
+
+function TabPanel(props) {
+	const { children, value, index, ...other } = props;
+  
+	return (
+	  <div
+		role="tabpanel"
+		hidden={value !== index}
+		id={`simple-tabpanel-${index}`}
+		aria-labelledby={`simple-tab-${index}`}
+		{...other}
+	  >
+		{value === index && (
+		  <Box sx={{ p: 3 }}>
+			<Typography>{children}</Typography>
+		  </Box>
+		)}
+	  </div>
+	);
+  }
+  
+  function a11yProps(index) {
+	return {
+	  id: `simple-tab-${index}`,
+	  'aria-controls': `simple-tabpanel-${index}`,
+	};
+  }
 
 const FilmDetail = () => {
 
@@ -26,15 +54,11 @@ const FilmDetail = () => {
 	const [film, setFilm] = useState();
 
 	// Hook useState for change tab
-	const [currentTab, setCurrentTab] = useState(0);
+	const [value, setValue] = useState(0);
 
-	const currentTabStyle = (id) => {
-		return { backgroundColor: id === currentTab ? '#02b875' : 'transparent', borderTopLeftRadius: 10, borderTopRightRadius: 10 }
-	}
-
-	const onTabClick = (id) => {
-		setCurrentTab(id)
-	}
+	const handleChange = (event, newValue) => {
+		setValue(newValue);
+	  };
 
 	// url change id
 
@@ -59,25 +83,24 @@ const FilmDetail = () => {
 		</div>
 
 		<div className="details-section">
-			<div className="details-menu">
-				{
-					profileTabs.map((tab) => {
-						return <div style={currentTabStyle(tab.id)} onClick={() => onTabClick(tab.id)} className="choice-style"><span>{tab.text}</span></div>;
-					})
-				}
-
-			</div>
-			<div className="details-more">
-				{currentTab === 0 && <div><FilmInfo film={film} /></div>}
-				{currentTab === 1 && <div>trailer</div>}
-				{currentTab === 2 && <div>audio</div>}
-
-			</div>
+			<Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+				<Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+					<Tab label="Item One" {...a11yProps(0)} />
+					<Tab label="Item Two" {...a11yProps(1)} />
+					<Tab label="Item Three" {...a11yProps(2)} />
+				</Tabs>
+			</Box>
+			<TabPanel className="details-more" value={value} index={0}>
+				<FilmInfo film={film} />
+			</TabPanel>
+			<TabPanel value={value} index={1}>
+				trailer
+			</TabPanel>
+			<TabPanel value={value} index={2}>
+				audio
+			</TabPanel>
 		</div>
 	</div>
-
-	console.log("test")
-
 }
-{/* <h1>Film ID: {params.filmId} {film.Title}</h1> */ }
+
 export default FilmDetail;
