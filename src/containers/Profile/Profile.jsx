@@ -27,6 +27,8 @@ const profileTabs = [
 ]
 
 
+
+
 const ProfileScreen = () => {
 
 	const [user, setUser] = useState();
@@ -44,7 +46,6 @@ const ProfileScreen = () => {
 		fetch('https://randomuser.me/api?results=1')
 			.then((res) => res.json())
 			.then(data => {
-
 				setUser(data.results[0])
 				console.log('data', data.results[0])
 			})
