@@ -1,4 +1,4 @@
-.Profile-main {
+.profile-main {
     display: flex;
     flex-direction: row;
     justify-content:start;
@@ -17,12 +17,12 @@
 }
 
 
-.Profile-last {
+.profile-last {
     display: flex;
     flex-direction: row;
     background-color: #1c202b;
     /* height: 100vh; */
-    flex-wrap: wrap;
+    
 }
 
 .tab-style {
@@ -35,7 +35,26 @@
 
 .film-item {
     display : flex;
+    flex-direction: row;
     width: 50%;
-    margin: 5px 0;
+    margin: 10px 0px;
     color: white;
+    border-bottom: 1px solid gray;
+}
+
+.tab-each {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    /* border: 1px solid #ffff; */
+    
+}
+
+.opisanie {
+    text-align: left;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
